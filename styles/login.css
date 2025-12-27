@@ -20,12 +20,14 @@ body {
     grid-template-columns: 1fr 1fr;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    border-radius: 20px;
     border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .charclogin {
     width: 350px;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .form-p {
@@ -39,7 +41,7 @@ body {
     text-shadow: 0 0 1.5px rgba(255, 255, 255, 0.558);
 }
 
-.∞ {
+.hd {
     margin-top: 20px;
 }
 
@@ -95,7 +97,8 @@ form button:active {
 }
 
 .buttons {
-    display: inline-block;
+    display: flex;
+    gap: 10px;
 }
 
 .buttons button[type="reset"] {
