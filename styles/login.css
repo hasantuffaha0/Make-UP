@@ -67,7 +67,7 @@ form input:not([type="checkbox"]) {
     box-shadow: 0 0 5px maroon;
 }
 
-form input::placeholder:not([type="checkbox"]) {
+form input::placeholder {
     color: maroon;
 }
 
