@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('../images/loginbackground.jpg') no-repeat center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: grid;
+    width: 800px;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border-radius: 10px;
+}
+
+.charclogin {
+    width: 350px;
+}
+
+.form-p {
+    display: flex;
+    flex-direction: column;
+    color: maroon;
+}
+
+.title {
+    font-size: 2rem;
+    text-shadow: 0 0 1.5px rgba(255, 255, 255, 0.558);
+}
+
+.∞ {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input:not([type="checkbox"]) {
+    width: 350px;
+    height: 50px;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: maroon;
+    box-shadow: 0 0 5px maroon;
+}
+
+form input::placeholder:not([type="checkbox"]) {
+    color: maroon;
+}
+
+form input:focus:not([type="checkbox"]) {
+    outline: 2px solid maroon;
+}
+
+form button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: maroon;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form button:hover,
+form button:focus,
+form button:active {
+    background-color: #5e0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+}
+
+.buttons {
+    display: inline-block;
+}
+
+.buttons button[type="reset"] {
+    background-color: transparent;
+    outline: 2px solid maroon;
+    color: maroon;
+    box-shadow: 0 0 5px maroon;
+}
+
+button[type="submit"] {
+    box-shadow: 0 0 5px maroon;
+}
+
+.rememberMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rememberMe #remember {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    accent-color: maroon;
+}
+
+.forgot,
+.register {
+    color: maroon;
+    backdrop-filter: brightness(300%);
+}
+
+.forgot:hover,
+.register:hover {
+    color: rgb(62, 0, 0);
+}
