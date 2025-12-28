@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" href="./images/HD-MAKEUPICO.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
@@ -15,7 +16,10 @@
             <p class="title">👋 Hi!</p>
             <form action="">
                 <input type="text" placeholder="Username" name="user" maxlength="30" required>
-                <input type="password" placeholder="Password" name="password" minlength="8" required>
+                <div class="password-box">
+                    <input type="password" class="password" placeholder="Password" name="password" minlength="8" required>
+                    <span class="toggle"><i class="fa-solid fa-eye" onclick="togglePassword()"></i></span>
+                </div>
                 <div class="buttons">
                     <button type="submit">Login</button>
                     <button type="reset">Reset</button>
@@ -29,5 +33,6 @@
             </form>
         </div>
     </div>
+    <script src="./scripts/showpassword.js"></script>
 </body>
 </html>
