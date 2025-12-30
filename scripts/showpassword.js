@@ -1,13 +1,12 @@
-function togglePassword() {
-    const password = document.querySelector(".password");
-    const icon = document.querySelector(".toggle i");
-    if (password.type === "password") {
-        password.type = "text";
-        icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
+function togglePassword(icon) {
+    const passwordBox = icon.closest("div");
+    const input = passwordBox.querySelector("input");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
     } else {
-        password.type = "password";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
+        input.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
     }
 }

@@ -4,19 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
-    <form action="">
-        <input type="text" placeholder="First Name" name="fname" required>
-        <input type="text" placeholder="Last Name" name="lname" required>
-        <input type="text" placeholder="Phone Number" name="phone" required>
-        <input type="email" placeholder="Email" name="email" required>
-        <input type="date" placeholder="birth" name="birth" required>
-        <input type="password" placeholder="Password" minlength="8" name="password" required>
-        <input type="password" placeholder="Confirm Password" minlength="8" name="confirm password" required>
-        <button type="submit">Register</button>
-        <button type="reset">Reset</button>
-    </form>
+    <div class="container">
+        <div class="left-container">
+            <p class="register">Register</p>
+            <img src="./images/HD-MAKEUP.png" alt="HD-LOGO">
+            <p class="label-have-account">Already have an acount?</p>
+            <a href="./index.html" class="login"><button>Log in</button></a>
+        </div>
+        <div class="right-container">
+            <form action="">
+                <p class="p-create-account">Create account</p>
+                <input type="text" placeholder="First Name" name="fname" required>
+                <input type="text" placeholder="Last Name" name="lname" required>
+                <input type="text" placeholder="Phone Number" name="phone" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="date" placeholder="birth" name="birth" required>
+                <div class="password-box">
+                    <input type="password" class="password" placeholder="Password" name="password" minlength="8" required>
+                    <span class="toggle"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i></span>
+                </div>
+                <div class="confirm-password-box">
+                    <input type="password" class="confirm-password" placeholder="Confirm Password" minlength="8" name="confirm password" required>
+                    <span class="toggle"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i></span>
+                </div>
+                <input type="checkbox" id="accept-terms" required>
+                <label for="accept-terms" class="checbox-sign-up">I accept the terms of the agreement</label>
+                <button type="submit" class="sign-up">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <script src="./scripts/showpassword.js"></script>
 </body>
 </html>
