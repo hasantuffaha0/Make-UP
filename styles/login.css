@@ -8,12 +8,13 @@
     /* body */
     --FONT-FAMILY: Arial, Helvetica, sans-serif;
     /* container */
-    --WIDTH: 750px;
+    --WIDTH: max-content;
     --GRID-COLUMN: 1fr 1fr;
     /* charclogin */
-    --CHAR-WIDTH: 350px;
+    --CHAR-WIDTH: 390px;
     --CHAR-BORDER: 10px 0px 0px 10px;
     --CHAR-MARGIN-RIGHT: 0px;
+    --CHAR-MARGIN: 0px;
     /* title */
     --TITLE-FONT-SIZE: 2rem;
     /* form */
@@ -59,6 +60,7 @@ body {
 
 .charclogin {
     width: var(--CHAR-WIDTH);
+    height: 100%;
     border-radius: var(--CHAR-BORDER);
     margin-right: var(--CHAR-MARGIN-RIGHT);
     margin: var(--CHAR-MARGIN);
@@ -136,25 +138,61 @@ form input:focus:not([type="checkbox"]) {
     font-size: 1.2rem;
 }
 
-form button {
+form button:not(.co-button), .go, .fa {
     width: var(--FORM-BUTTON-WIDTH);
     height: var(--FORM-BUTTON-HEIGHT);
+    box-shadow: 0 0 3px maroon;
     border-radius: 10px;
-    border: none;
+    border: 2px solid maroon;
     background-color: maroon;
+    outline: none;
     color: white;
     font-weight: bold;
     cursor: pointer;
     font-size: var(--FORM-FONT-SIZE-BUTTON);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
-form button:hover,
-form button:focus,
-form button:active {
-    background-color: #5e0000;
+form button:hover[type="submit"] {
+    background-color: transparent;
+    color: maroon;
+    border: 2px solid maroon;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+}
+
+form button:hover[type="reset"], .coo:hover {
+    background-color: maroon;
+    color: white;
+    border: 2px solid maroon;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+}
+
+form button:focus:not(.co-button),
+form button:active:not(.co-button),
+.coo:focus,
+.coo:active {
+    border: 1px solid maroon;
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+}
+
+button[type="reset"], .coo {
+    border: 1px solid maroon;
+}
+
+.coo {
+    background-color: transparent;
+}
+
+.coo button {
+    font-size: var(--FORM-FONT-SIZE-BUTTON);
+    color: maroon;
+    font-weight: bold;
+}
+
+.coo:hover button {
+    color: white;
 }
 
 .buttons {
@@ -162,15 +200,37 @@ form button:active {
     gap: 10px;
 }
 
-.buttons button[type="reset"] {
+.fa-go {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button[type="reset"], button:not(.co-button) {
     background-color: transparent;
-    outline: 2px solid maroon;
     color: maroon;
     box-shadow: 0 0 5px maroon;
 }
 
-button[type="submit"] {
-    box-shadow: 0 0 5px maroon;
+.go, .fa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.go img, .fa img {
+    width: fit-content;
+    height: 90%;
+    border-radius: 10px 0 0 10px;
+    margin-left: 5px;
+}
+
+.go button, .fa button {
+    width: 70%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .rememberMe {
@@ -185,6 +245,10 @@ button[type="submit"] {
     height: var(--REMEMBERME-CHECKBOX-HEIGHT);
     margin-right: 10px;
     accent-color: maroon;
+}
+
+#remember {
+    cursor: pointer;
 }
 
 .forgot,

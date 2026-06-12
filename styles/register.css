@@ -5,61 +5,201 @@
 }
 
 body {
-    background: url("../images/registerbackground.jpg") no-repeat center / cover;
-    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    height: fit-content;
+    padding: 30px;
+    min-height: 100vh;
+    background: url('../images/registerbackground.jpg') no-repeat center / cover;
+    background-attachment: fixed;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    width: 70%;
-    height: 90%;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-}
-
-.container .left-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-right: 3px solid pink;
-}
-
-.container .right-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    max-width: 850px;
+    height: min-content;
     padding: 20px;
-}
-
-.container .left-container .register {
-    transform: translateY(20px);
-    font-size: 3rem;
-    color: maroon;
-}
-
-.container .left-container .label-have-account {
-    transform: translateY(-30px);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 1rem;
 }
 
-.container .left-container button {
-    transform: translateY(-10px);
-    width: 130px;
-    height: 50px;
-    background-color: maroon;
-    border: 1px solid white;
-    border-radius: 10px;
-    color: pink;
-    font-size: 1.1rem;
+form {
+    border: 2px solid maroon;
+    border-radius: 15px;
+    background-color: rgb(246, 241, 221);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-.container .left-container img {
-    width: 60%;
-    border-radius: 50%;
+.p-create-account {
+    font-size: 3rem;
+    color: maroon;
+    font-weight: bold;
+    text-shadow: 0 0 1.5px rgba(255, 255, 255, 0.558);
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    line-height: 70px;
+    border-radius: 5px;
+}
+
+.register {
+    font-size: 2rem;
+    color: maroon;
+    text-shadow: 0 0 1.5px rgba(255, 255, 255, 0.558);
+    font-weight: bold;
+    text-align: center;
+}
+
+label {
+    color: maroon;
+    font-size: 1.2rem;
+}
+
+input:not([type="checkbox"]), #gender {
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    color: maroon;
+    box-shadow: 0 0 5px maroon;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
+#gender {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='maroon' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: maroon;
+}
+
+input:focus:not([type="checkbox"]), #gender:focus {
+    outline: 2px solid maroon;
+}
+
+.section-one, .section-two, .section-five {
+    display: flex;
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.first-name, .last-name, .phone, .email, .birth, .password-box, .confirm-password-box, .gender {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-three, .section-four {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.phone, .email {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.password-box, .confirm-password-box {
+    position: relative;
+}
+
+.toggle {
+    color: maroon;
+    right: 12px;
+    top: 60%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.terms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.sign-up {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: maroon;
+    border: 2px solid maroon;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.05s ease;
+    cursor: pointer;
+}
+
+.sign-up:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid maroon;
+    color: maroon;
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+#accept-terms {
+    width: 18px;
+    height: 18px;
+    accent-color: maroon;
+    cursor: pointer;
+}
+
+.label-have-account {
+    text-align: center;
+    margin-top: 10px;
+    color: maroon;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+label a {
+    text-decoration: none;
+}
+
+a {
+    color: maroon;
+}
+
+a:hover {
+    color: rgb(62, 0, 0);
+}
+
+@media (max-width: 650px) {
+    .section-one, .section-two, .section-five {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .first-name, .last-name, .birth, .password-box, .confirm-password-box, .gender {
+        width: 100%;
+    }
+    form {
+        padding: 20px 15px;
+    }
 }
