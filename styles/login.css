@@ -8,7 +8,7 @@
     /* body */
     --FONT-FAMILY: Arial, Helvetica, sans-serif;
     /* container */
-    --WIDTH: max-content;
+    --WIDTH: fit-content;
     --GRID-COLUMN: 1fr 1fr;
     /* charclogin */
     --CHAR-WIDTH: 390px;
@@ -64,6 +64,7 @@ body {
     border-radius: var(--CHAR-BORDER);
     margin-right: var(--CHAR-MARGIN-RIGHT);
     margin: var(--CHAR-MARGIN);
+    background: url('../images/charclogin.jpg') no-repeat center / cover;
 }
 
 .form-p {
@@ -283,6 +284,14 @@ button[type="reset"], .coo {
         --REMEMBERME-CHECKBOX-HEIGHT: 12px;
         --FORGET-REGISTER-FONT-SIZE: 0.8rem;
     }
+
+    form {
+        /* background-color: rgb(246, 241, 221); */
+    }
+
+    .container {
+        /* padding: 30px; */
+    }
 }
 
 
@@ -307,10 +316,8 @@ button[type="reset"], .coo {
 
 @media screen and (max-width: 550px) {
     :root {
-        --WIDTH: 300px;
+        --WIDTH: 330px;
         --GRID-COLUMN: none;
-        --CHAR-WIDTH: 300px;
-        --CHAR-BORDER: 10px 10px 0px 0px;
         --TITLE-FONT-SIZE: 1.2rem;
         --FORM-HEIGHT-INPUT: 35px;
         --FORM-BUTTON-WIDTH: 100px;
@@ -320,5 +327,20 @@ button[type="reset"], .coo {
         --REMEMBERME-CHECKBOX-WIDTH: 15px;
         --REMEMBERME-CHECKBOX-HEIGHT: 15px;
         --FORGET-REGISTER-FONT-SIZE: 0.8rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .charclogin {
+        display: none;
+    }
+
+    form {
+        background-color: rgb(246, 241, 221);
+        margin: 10px;
     }
 }
