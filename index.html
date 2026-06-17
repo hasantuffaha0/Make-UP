@@ -14,31 +14,35 @@
         <div class="form-p">
             <p class="hd title">HD Honey &infin;</p>
             <p class="title">👋 Hi!</p>
-            <form action="./register.html" method="post">
+            <form action="./dashboard.html" method="post">
                 <input type="text" placeholder="Username" name="user" maxlength="30" required>
+                
                 <div class="password-box">
                     <input type="password" class="password" placeholder="Password" name="password" minlength="8" required>
                     <span class="toggle"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i></span>
                 </div>
+                
                 <div class="buttons">
                     <button type="submit">Login</button>
                     <button type="reset">Reset</button>
                 </div>
+                
                 <div class="fa-go">
                     <div class="go coo">
-                        <!-- <i class="fa-brands fa-google"></i> -->
                         <img src="images/google.png" alt="logo-google">
-                        <button class="google-btn co-button">Google</button>
+                        <button type="button" class="google-btn co-button">Google</button>
                     </div>
                     <div class="fa coo">
                         <img src="images/facebook.png" alt="logo-facebook">
-                        <button class="faceboook-btn co-button">Facebook</button>
+                        <button type="button" class="facebook-btn co-button">Facebook</button>
                     </div>
                 </div>
+                
                 <div class="rememberMe">
                     <input type="checkbox" id="remember" name="remember">
                     <label for="remember">Remember Me</label>
                 </div>
+                
                 <a href="./forgotpassword.html" class="forgot">Forgot password</a>
                 <p class="registeraccount">Don't have an account? <a href="./register.html" class="register">Register</a></p>
             </form>

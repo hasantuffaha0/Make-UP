@@ -5,35 +5,20 @@
 }
 
 :root {
-    /* body */
     --FONT-FAMILY: Arial, Helvetica, sans-serif;
-    /* container */
     --WIDTH: fit-content;
     --GRID-COLUMN: 1fr 1fr;
-    /* charclogin */
     --CHAR-WIDTH: 390px;
     --CHAR-BORDER: 10px 0px 0px 10px;
-    --CHAR-MARGIN-RIGHT: 0px;
-    --CHAR-MARGIN: 0px;
-    /* title */
     --TITLE-FONT-SIZE: 2rem;
-    /* form */
     --FORM-WIDTH: 400px;
     --FORM-MARGIN-TOP: 20px;
-    /* form input:not([type="checkbox"]) */
     --FORM-WIDTH-INPUT: 350px;
     --FORM-HEIGHT-INPUT: 50px;
-    /* form button */
     --FORM-BUTTON-WIDTH: 150px;
     --FORM-BUTTON-HEIGHT: 40px;
     --FORM-FONT-SIZE-BUTTON: 1rem;
-    /* rememberMe */
     --REMEMBERME-FONT-SIZE: 1rem;
-    /* .rememberMe #remember */
-    --REMEMBERME-CHECKBOX-WIDTH: 15px;
-    --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-    /* .forgot, .registeraccount */
-    --FORGET-REGISTER-FONT-SIZE: 1rem;
 }
 
 body {
@@ -62,8 +47,6 @@ body {
     width: var(--CHAR-WIDTH);
     height: 100%;
     border-radius: var(--CHAR-BORDER);
-    margin-right: var(--CHAR-MARGIN-RIGHT);
-    margin: var(--CHAR-MARGIN);
     background: url('../images/charclogin.jpg') no-repeat center / cover;
 }
 
@@ -96,23 +79,25 @@ form {
     width: var(--FORM-WIDTH);
 }
 
-form input:not([type="checkbox"]) {
+form input:not([type="checkbox"]), .password-box input {
     width: var(--FORM-WIDTH-INPUT);
     height: var(--FORM-HEIGHT-INPUT);
-    border: none;
+    border: 1px solid maroon;
     padding: 15px;
     border-radius: 5px;
     font-size: 1rem;
     color: maroon;
     box-shadow: 0 0 5px maroon;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input:focus:not([type="checkbox"]), .password-box input:focus {
+    outline: 2px solid maroon;
 }
 
 form input::placeholder {
     color: maroon;
-}
-
-form input:focus:not([type="checkbox"]) {
-    outline: 2px solid maroon;
 }
 
 .password-box {
@@ -121,17 +106,13 @@ form input:focus:not([type="checkbox"]) {
 }
 
 .password-box input {
-    width: 100%;
-    height: 50px;
-    padding: 10px 40px 10px 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid maroon;
+    width: 100%; 
+    padding-right: 40px; 
 }
 
 .password-box .toggle {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -157,7 +138,6 @@ form button:not(.co-button), .go, .fa {
 form button:hover[type="submit"] {
     background-color: transparent;
     color: maroon;
-    border: 2px solid maroon;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
 }
@@ -165,15 +145,13 @@ form button:hover[type="submit"] {
 form button:hover[type="reset"], .coo:hover {
     background-color: maroon;
     color: white;
-    border: 2px solid maroon;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
 }
 
 form button:focus:not(.co-button),
 form button:active:not(.co-button),
-.coo:focus,
-.coo:active {
+.coo:focus, .coo:active {
     border: 1px solid maroon;
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
 }
@@ -196,17 +174,12 @@ button[type="reset"], .coo {
     color: white;
 }
 
-.buttons {
+.buttons, .fa-go {
     display: flex;
     gap: 10px;
 }
 
-.fa-go {
-    display: flex;
-    gap: 10px;
-}
-
-.buttons button[type="reset"], button:not(.co-button) {
+.buttons button[type="reset"] {
     background-color: transparent;
     color: maroon;
     box-shadow: 0 0 5px maroon;
@@ -242,50 +215,36 @@ button[type="reset"], .coo {
 }
 
 .rememberMe #remember {
-    width: var(--REMEMBERME-CHECKBOX-WIDTH);
-    height: var(--REMEMBERME-CHECKBOX-HEIGHT);
+    width: 15px;
+    height: 15px;
     margin-right: 10px;
     accent-color: maroon;
-}
-
-#remember {
     cursor: pointer;
 }
 
-.forgot,
-.register {
+.forgot, .register {
     color: maroon;
-    backdrop-filter: transparent;
+    text-decoration: none;
 }
 
-.forgot:hover,
-.register:hover {
+.forgot:hover, .register:hover {
     color: rgb(62, 0, 0);
 }
 
-.forgot,
-.registeraccount {
-    font-size: var(--FORGET-REGISTER-FONT-SIZE);
+.forgot, .registeraccount {
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 820px) {
     :root {
         --WIDTH: 650px;
         --CHAR-WIDTH: 300px;
-        --CHAR-MARGIN-RIGHT: 30px;
-        --TITLE-FONT-SIZE: 2rem;
         --FORM-WIDTH: 350px;
         --FORM-WIDTH-INPUT: 310px;
         --FORM-HEIGHT-INPUT: 40px;
         --FORM-BUTTON-WIDTH: 140px;
-        --FORM-FONT-SIZE-BUTTON: 1rem;
-        --REMEMBERME-FONT-SIZE: 1rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 15px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 }
-
 
 @media screen and (max-width: 660px) {
     :root {
@@ -299,10 +258,6 @@ button[type="reset"], .coo {
         --FORM-BUTTON-HEIGHT: 25px;
         --REMEMBERME-FONT-SIZE: 0.75rem;
         --FORM-BUTTON-WIDTH: 120px;
-        --FORM-FONT-SIZE-BUTTON: 1rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 15px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 }
 
@@ -316,18 +271,14 @@ button[type="reset"], .coo {
         --FORM-WIDTH-INPUT: 330px;
         --FORM-BUTTON-WIDTH: 150px;
         --FORM-BUTTON-HEIGHT: 35px;
-        --FORM-FONT-SIZE-BUTTON: 1rem;
         --REMEMBERME-FONT-SIZE: 1rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 15px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(246, 241, 221, 0.7);
+        background-color: rgba(246, 241, 221, 0.7);
     }
 
     .charclogin {
@@ -337,18 +288,11 @@ button[type="reset"], .coo {
 
 @media screen and (max-width: 400px) {
     :root {
-        --WIDTH: 90%;
         --FORM-WIDTH: 100%;
-        --GRID-COLUMN: none;
         --TITLE-FONT-SIZE: 2rem;
         --FORM-HEIGHT-INPUT: 40px;
         --FORM-BUTTON-WIDTH: 120px;
         --FORM-WIDTH-INPUT: 300px;
         --FORM-BUTTON-HEIGHT: 30px;
-        --FORM-FONT-SIZE-BUTTON: 1rem;
-        --REMEMBERME-FONT-SIZE: 1rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 15px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 }

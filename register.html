@@ -13,22 +13,24 @@
         <p class="p-create-account">Create account</p>
         <form action="" method="post">
             <p class="register">Register</p>
-            <div class="section-one">
-                <div class="first-name">
+            
+            <div class="form-row-split">
+                <div class="form-group-half">
                     <label for="f-name">First Name<sup>*</sup></label>
                     <input type="text" placeholder="First Name" name="fname" required id="f-name" minlength="3">
                 </div>
-                <div class="last-name">
+                <div class="form-group-half">
                     <label for="l-name">Last Name<sup>*</sup></label>
                     <input type="text" placeholder="Last Name" name="lname" required id="l-name" minlength="3">
                 </div>
             </div>
-            <div class="section-two">
-                <div class="birth">
+
+            <div class="form-row-split">
+                <div class="form-group-half">
                     <label for="birth">Date of Birth<sup>*</sup></label>
                     <input type="date" placeholder="birth" name="birth" required id="birth">
                 </div>
-                <div class="gender">
+                <div class="form-group-half">
                     <label for="gender">Gender<sup>*</sup></label>
                     <select name="gender" id="gender" required>
                         <option value="">Select Gender</option>
@@ -37,34 +39,39 @@
                     </select>
                 </div>
             </div>
-            <div class="section-three">
-                <div class="phone">
+
+            <div class="form-row-full">
+                <div class="form-group-full">
                     <label for="phone">Phone Number<sup>*</sup></label>
                     <input type="tel" placeholder="Phone Number" name="phone" required id="phone" pattern="[0-9]{11}">
                 </div>
             </div>
-            <div class="section-four">
-                <div class="email">
+
+            <div class="form-row-full">
+                <div class="form-group-full">
                     <label for="email">Email<sup>*</sup></label>
                     <input type="email" placeholder="Email" name="email" required id="email">
                 </div>
             </div>
-            <div class="section-five">
-                <div class="password-box">
+
+            <div class="form-row-split">
+                <div class="form-group-half password-box">
                     <label for="password">Password<sup>*</sup></label>
                     <input type="password" class="password" placeholder="Password" name="password" minlength="8" required id="password">
                     <span class="toggle"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i></span>
                 </div>
-                <div class="confirm-password-box">
+                <div class="form-group-half confirm-password-box">
                     <label for="confirm-password">Confirm Password<sup>*</sup></label>
                     <input type="password" class="confirm-password" placeholder="Confirm Password" minlength="8" name="confirm_password" required id="confirm-password">
                     <span class="toggle"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i></span>
                 </div>
             </div>
+
             <div class="terms">
                 <input type="checkbox" id="accept-terms" required>
                 <label for="accept-terms" class="checkbox-sign-up">I accept the <a href="">terms of the agreement</a></label>
             </div>
+
             <button type="submit" class="sign-up">Sign up</button>
             <p class="label-have-account">Already have an account? <a href="./index.html" class="login">Log in</a></p>
         </form>
