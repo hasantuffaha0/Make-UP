@@ -39,18 +39,18 @@
 body {
     font-family: var(--FONT-FAMILY);
     background: url('../images/loginbackground.jpg') no-repeat center / cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    padding: 40px;
 }
 
 .container {
     display: grid;
     width: var(--WIDTH);
     grid-template-columns: var(--GRID-COLUMN);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(246, 241, 221, 0.7);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
@@ -64,7 +64,8 @@ body {
     border-radius: var(--CHAR-BORDER);
     margin-right: var(--CHAR-MARGIN-RIGHT);
     margin: var(--CHAR-MARGIN);
-    background: url('../images/charclogin.jpg') no-repeat center / cover;
+    background: none;
+    display: none;
 }
 
 .form-p {
@@ -266,73 +267,4 @@ button[type="reset"], .coo {
 .forgot,
 .registeraccount {
     font-size: var(--FORGET-REGISTER-FONT-SIZE);
-}
-
-@media screen and (max-width: 820px) {
-    :root {
-        --WIDTH: 650px;
-        --CHAR-WIDTH: 300px;
-        --CHAR-MARGIN-RIGHT: 30px;
-        --TITLE-FONT-SIZE: 1.5rem;
-        --FORM-WIDTH: 350px;
-        --FORM-WIDTH-INPUT: 300px;
-        --FORM-HEIGHT-INPUT: 40px;
-        --FORM-BUTTON-WIDTH: 120px;
-        --FORM-FONT-SIZE-BUTTON: 0.8rem;
-        --REMEMBERME-FONT-SIZE: 0.8rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 12px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 12px;
-        --FORGET-REGISTER-FONT-SIZE: 0.8rem;
-    }
-}
-
-
-@media screen and (max-width: 660px) {
-    :root {
-        --WIDTH: 550px;
-        --CHAR-WIDTH: 250px;
-        --TITLE-FONT-SIZE: 1rem;
-        --FORM-WIDTH: 300px;
-        --FORM-MARGIN-TOP: 10px;
-        --FORM-WIDTH-INPUT: 250px;
-        --FORM-HEIGHT-INPUT: 30px;
-        --FORM-BUTTON-WIDTH: 90px;
-        --FORM-BUTTON-HEIGHT: 25px;
-        --FORM-FONT-SIZE-BUTTON: 0.5rem;
-        --REMEMBERME-FONT-SIZE: 0.5rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 10px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 10px;
-        --FORGET-REGISTER-FONT-SIZE: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    :root {
-        --WIDTH: 330px;
-        --GRID-COLUMN: none;
-        --TITLE-FONT-SIZE: 1.2rem;
-        --FORM-HEIGHT-INPUT: 35px;
-        --FORM-BUTTON-WIDTH: 100px;
-        --FORM-BUTTON-HEIGHT: 30px;
-        --FORM-FONT-SIZE-BUTTON: 0.8rem;
-        --REMEMBERME-FONT-SIZE: 0.8rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 15px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-        --FORGET-REGISTER-FONT-SIZE: 0.8rem;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .charclogin {
-        display: none;
-    }
-
-    form {
-        background-color: rgb(246, 241, 221);
-        margin: 10px;
-    }
 }
