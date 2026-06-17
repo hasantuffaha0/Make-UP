@@ -48,7 +48,7 @@ body {
 
 .container {
     display: grid;
-    width: var(--WIDTH);
+    width: 90%;
     grid-template-columns: var(--GRID-COLUMN);
     background-color: rgb(246, 241, 221, 0.7);
     backdrop-filter: blur(5px);
