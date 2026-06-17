@@ -39,7 +39,7 @@
 body {
     font-family: var(--FONT-FAMILY);
     background: url('../images/loginbackground.jpg') no-repeat center / cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -308,31 +308,47 @@ button[type="reset"], .coo {
 
 @media screen and (max-width: 550px) {
     :root {
-        --WIDTH: 330px;
+        --WIDTH: 90%;
+        --FORM-WIDTH: 400px;
         --GRID-COLUMN: none;
-        --TITLE-FONT-SIZE: 1.2rem;
-        --FORM-HEIGHT-INPUT: 35px;
-        --FORM-BUTTON-WIDTH: 100px;
-        --FORM-BUTTON-HEIGHT: 30px;
-        --FORM-FONT-SIZE-BUTTON: 0.8rem;
-        --REMEMBERME-FONT-SIZE: 0.8rem;
+        --TITLE-FONT-SIZE: 2.5rem;
+        --FORM-HEIGHT-INPUT: 45px;
+        --FORM-WIDTH-INPUT: 330px;
+        --FORM-BUTTON-WIDTH: 150px;
+        --FORM-BUTTON-HEIGHT: 35px;
+        --FORM-FONT-SIZE-BUTTON: 1rem;
+        --REMEMBERME-FONT-SIZE: 1rem;
         --REMEMBERME-CHECKBOX-WIDTH: 15px;
         --REMEMBERME-CHECKBOX-HEIGHT: 15px;
-        --FORGET-REGISTER-FONT-SIZE: 0.8rem;
+        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgb(246, 241, 221, 0.7);
     }
 
     .charclogin {
         display: none;
     }
+}
 
-    form {
-        background-color: rgb(246, 241, 221);
-        margin: 10px;
+@media screen and (max-width: 400px) {
+    :root {
+        --WIDTH: 90%;
+        --FORM-WIDTH: 100%;
+        --GRID-COLUMN: none;
+        --TITLE-FONT-SIZE: 2rem;
+        --FORM-HEIGHT-INPUT: 40px;
+        --FORM-BUTTON-WIDTH: 120px;
+        --FORM-WIDTH-INPUT: 300px;
+        --FORM-BUTTON-HEIGHT: 30px;
+        --FORM-FONT-SIZE-BUTTON: 1rem;
+        --REMEMBERME-FONT-SIZE: 1rem;
+        --REMEMBERME-CHECKBOX-WIDTH: 15px;
+        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
+        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 }
