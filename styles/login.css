@@ -8,6 +8,7 @@
     --FONT-FAMILY: Arial, Helvetica, sans-serif;
     --WIDTH: fit-content;
     --GRID-COLUMN: 1fr 1fr;
+    --CHAR-DISPLAY: block;
     --CHAR-WIDTH: 390px;
     --CHAR-BORDER: 10px 0px 0px 10px;
     --TITLE-FONT-SIZE: 2rem;
@@ -24,10 +25,11 @@
 body {
     font-family: var(--FONT-FAMILY);
     background: url('../images/loginbackground.jpg') no-repeat center / cover;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100dvh;
+    margin: 0;
     flex-direction: column;
 }
 
@@ -48,6 +50,7 @@ body {
     height: 100%;
     border-radius: var(--CHAR-BORDER);
     background: url('../images/charclogin.jpg') no-repeat center / cover;
+    display: var(--CHAR-DISPLAY);
 }
 
 .form-p {
@@ -272,6 +275,7 @@ button[type="reset"], .coo {
         --FORM-BUTTON-WIDTH: 150px;
         --FORM-BUTTON-HEIGHT: 35px;
         --REMEMBERME-FONT-SIZE: 1rem;
+        --CHAR-DISPLAY: none;
     }
 
     .container {
@@ -279,10 +283,6 @@ button[type="reset"], .coo {
         justify-content: center;
         align-items: center;
         background-color: rgba(246, 241, 221, 0.7);
-    }
-
-    .charclogin {
-        display: none;
     }
 }
 
