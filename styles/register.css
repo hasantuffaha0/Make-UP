@@ -95,7 +95,6 @@ input::placeholder {
     color: maroon;
 }
 
-/* تم استبدال الأسماء الرقمية بكلاسات تعبر عن التصميم */
 .form-row-split, .form-row-full {
     display: flex;
     margin-top: 25px;
