@@ -255,7 +255,7 @@ button[type="reset"], .coo {
 .forgot,
 .register {
     color: maroon;
-    backdrop-filter: brightness(300%);
+    backdrop-filter: transparent;
 }
 
 .forgot:hover,
@@ -273,16 +273,16 @@ button[type="reset"], .coo {
         --WIDTH: 650px;
         --CHAR-WIDTH: 300px;
         --CHAR-MARGIN-RIGHT: 30px;
-        --TITLE-FONT-SIZE: 1.5rem;
+        --TITLE-FONT-SIZE: 2rem;
         --FORM-WIDTH: 350px;
-        --FORM-WIDTH-INPUT: 300px;
+        --FORM-WIDTH-INPUT: 310px;
         --FORM-HEIGHT-INPUT: 40px;
-        --FORM-BUTTON-WIDTH: 120px;
-        --FORM-FONT-SIZE-BUTTON: 0.8rem;
-        --REMEMBERME-FONT-SIZE: 0.8rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 12px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 12px;
-        --FORGET-REGISTER-FONT-SIZE: 0.8rem;
+        --FORM-BUTTON-WIDTH: 140px;
+        --FORM-FONT-SIZE-BUTTON: 1rem;
+        --REMEMBERME-FONT-SIZE: 1rem;
+        --REMEMBERME-CHECKBOX-WIDTH: 15px;
+        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
+        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 }
 
@@ -291,18 +291,18 @@ button[type="reset"], .coo {
     :root {
         --WIDTH: 550px;
         --CHAR-WIDTH: 250px;
-        --TITLE-FONT-SIZE: 1rem;
+        --TITLE-FONT-SIZE: 1.5rem;
         --FORM-WIDTH: 300px;
         --FORM-MARGIN-TOP: 10px;
         --FORM-WIDTH-INPUT: 250px;
         --FORM-HEIGHT-INPUT: 30px;
-        --FORM-BUTTON-WIDTH: 90px;
         --FORM-BUTTON-HEIGHT: 25px;
-        --FORM-FONT-SIZE-BUTTON: 0.5rem;
-        --REMEMBERME-FONT-SIZE: 0.5rem;
-        --REMEMBERME-CHECKBOX-WIDTH: 10px;
-        --REMEMBERME-CHECKBOX-HEIGHT: 10px;
-        --FORGET-REGISTER-FONT-SIZE: 0.5rem;
+        --REMEMBERME-FONT-SIZE: 0.75rem;
+        --FORM-BUTTON-WIDTH: 120px;
+        --FORM-FONT-SIZE-BUTTON: 1rem;
+        --REMEMBERME-CHECKBOX-WIDTH: 15px;
+        --REMEMBERME-CHECKBOX-HEIGHT: 15px;
+        --FORGET-REGISTER-FONT-SIZE: 1rem;
     }
 }
 
